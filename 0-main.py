@@ -1,16 +1,13 @@
+
 #!/usr/bin/python3
-"""
-0-main
-"""
-pascal_triangle = __import__('0-pascal_triangle').pascal_triangle
 
-def print_triangle(triangle):
-    """
-    Print the triangle
-    """
-    for row in triangle:
-        print("[{}]".format(",".join([str(x) for x in row])))
+canUnlockAll = __import__('0-lockboxes').canUnlockAll
 
+boxes = [[1], [2], [3], [4], []]
+print(canUnlockAll(boxes))
 
-if __name__ == "__main__":
-    print_triangle(pascal_triangle(5))
+boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
+print(canUnlockAll(boxes))
+
+boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
+print(canUnlockAll(boxes))
